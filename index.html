@@ -1,0 +1,172 @@
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maison Élégance | Hair Studio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+    <a href="#" class="logo">
+        <span>HAIR · BEAUTY · EXPERIENCE</span>
+        Maison Élégance
+    </a>
+
+    <nav>
+        <a href="#services">Services</a>
+        <a href="#studio">Das Studio</a>
+        <a href="#booking" class="nav-button">Termin buchen</a>
+    </nav>
+</header>
+
+<main>
+    <section class="hero" id="studio">
+        <div class="hero-content">
+            <p class="eyebrow">YOUR BEAUTY. YOUR MOMENT.</p>
+            <h1>Ein Moment<br><em>nur für dich.</em></h1>
+            <p>
+                Individuelle Haarpflege, moderne Farbtechniken
+                und liebevolle Details – für deinen ganz
+                persönlichen Look.
+            </p>
+            <a href="#booking" class="button">Termin vereinbaren ↗</a>
+        </div>
+
+        <div class="hero-image"></div>
+    </section>
+
+    <section class="intro">
+        <p class="eyebrow">WILLKOMMEN BEI MAISON ÉLÉGANCE</p>
+        <h2>Schönheit beginnt mit<br><em>einem guten Gefühl.</em></h2>
+        <p>
+            Wir glauben an Looks, die deine Persönlichkeit
+            unterstreichen. Entdecke ausgewählte Services
+            in entspannter Atmosphäre.
+        </p>
+    </section>
+
+    <section class="services" id="services">
+        <p class="eyebrow">UNSERE LEISTUNGEN</p>
+        <h2>Für deinen <em>Signature Look.</em></h2>
+
+        <div class="service-grid">
+            <article class="service-card">
+                <span>01</span>
+                <h3>Haircut & Styling</h3>
+                <p>Individueller Schnitt und gepflegtes Finish.</p>
+                <strong>60 Min. · 65 €</strong>
+            </article>
+
+            <article class="service-card">
+                <span>02</span>
+                <h3>Blowout</h3>
+                <p>Volumen, Bewegung und glänzendes Finish.</p>
+                <strong>45 Min. · 40 €</strong>
+            </article>
+
+            <article class="service-card">
+                <span>03</span>
+                <h3>Color & Glossing</h3>
+                <p>Frische Farbe und strahlender Glanz.</p>
+                <strong>120 Min. · 145 €</strong>
+            </article>
+
+            <article class="service-card">
+                <span>04</span>
+                <h3>Balayage</h3>
+                <p>Natürliche Highlights mit weichen Übergängen.</p>
+                <strong>180 Min. · 220 €</strong>
+            </article>
+
+            <article class="service-card">
+                <span>05</span>
+                <h3>Hair Treatment</h3>
+                <p>Intensive Pflege für geschmeidiges Haar.</p>
+                <strong>45 Min. · 55 €</strong>
+            </article>
+
+            <article class="service-card">
+                <span>06</span>
+                <h3>Event Styling</h3>
+                <p>Ein besonderer Look für besondere Anlässe.</p>
+                <strong>75 Min. · 85 €</strong>
+            </article>
+        </div>
+    </section>
+
+    <section class="booking" id="booking">
+        <div class="booking-heading">
+            <p class="eyebrow">ONLINE BOOKING</p>
+            <h2>Dein nächster Termin<br><em>ist nur wenige Klicks entfernt.</em></h2>
+        </div>
+
+        <div class="booking-card">
+            <h3>01 · Deine Behandlung</h3>
+            <label for="service">Dienstleistung auswählen</label>
+            <select id="service">
+                <option value="cut">Haircut & Styling – 60 Min.</option>
+                <option value="blowout">Blowout – 45 Min.</option>
+                <option value="color">Color & Glossing – 120 Min.</option>
+                <option value="balayage">Balayage – 180 Min.</option>
+                <option value="care">Hair Treatment – 45 Min.</option>
+                <option value="event">Event Styling – 75 Min.</option>
+            </select>
+
+            <h3>02 · Dein Wunschtermin</h3>
+            <div class="calendar">
+                <div class="calendar-header">
+                    <button id="prevMonth" type="button">‹</button>
+                    <strong id="monthYear"></strong>
+                    <button id="nextMonth" type="button">›</button>
+                </div>
+                <div class="calendar-grid" id="calendar">
+                    <span>Mo</span><span>Di</span><span>Mi</span>
+                    <span>Do</span><span>Fr</span><span>Sa</span>
+                    <span>So</span>
+                </div>
+            </div>
+
+            <h3>03 · Deine Uhrzeit</h3>
+            <div id="timeSlots" class="time-slots">
+                <p>Bitte wähle zuerst ein Datum.</p>
+            </div>
+
+            <h3>04 · Deine Kontaktdaten</h3>
+            <form id="bookingForm">
+                <label for="name">Vor- und Nachname</label>
+                <input type="text" id="name" required placeholder="Dein Name">
+
+                <label for="email">E-Mail-Adresse</label>
+                <input type="email" id="email" required placeholder="name@beispiel.de">
+
+                <label for="phone">Telefonnummer</label>
+                <input type="tel" id="phone" required placeholder="+49 ...">
+
+                <button type="submit" class="button">
+                    Termin buchen ↗
+                </button>
+            </form>
+
+            <p id="message" aria-live="polite"></p>
+        </div>
+    </section>
+
+    <section class="appointments">
+        <p class="eyebrow">STUDIO INTERN</p>
+        <h2>Terminübersicht</h2>
+        <div id="appointmentList"></div>
+    </section>
+</main>
+
+<footer>
+    <h2>Maison Élégance</h2>
+    <p>HAIR · BEAUTY · EXPERIENCE</p>
+    <p>© 2026 Maison Élégance</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
